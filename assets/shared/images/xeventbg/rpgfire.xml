@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rpgfire.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fire_iddle0000" x="0" y="0" width="279" height="422"/>
+	<SubTexture name="fire_iddle0001" x="0" y="0" width="279" height="422"/>
+	<SubTexture name="fire_iddle0002" x="279" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0003" x="279" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0004" x="558" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0005" x="558" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0006" x="837" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0007" x="837" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0008" x="1116" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0009" x="1116" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0010" x="1395" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0011" x="1395" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0012" x="1674" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0013" x="1674" y="0" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0014" x="0" y="422" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0015" x="0" y="422" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0016" x="279" y="422" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0017" x="279" y="422" width="279" height="412" frameX="0" frameY="0" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_start0000" x="558" y="422" width="279" height="411" frameX="0" frameY="-7" frameWidth="279" frameHeight="444"/>
+	<SubTexture name="fire_start0001" x="837" y="422" width="279" height="411" frameX="0" frameY="-7" frameWidth="279" frameHeight="444"/>
+	<SubTexture name="fire_start0002" x="1116" y="422" width="279" height="428" frameX="0" frameY="0" frameWidth="279" frameHeight="444"/>
+	<SubTexture name="fire_start0003" x="1395" y="422" width="279" height="444"/>
+	<SubTexture name="fire_start0004" x="1395" y="422" width="279" height="444"/>
+</TextureAtlas>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="inktest.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Ink Sing Note DOWN0000" x="0" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0001" x="0" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0002" x="764" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0003" x="764" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0004" x="1528" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0005" x="1528" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0006" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0007" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0008" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0009" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0010" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0011" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0012" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0013" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note DOWN0014" x="2292" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0000" x="3056" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0001" x="3056" y="0" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0002" x="0" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0003" x="0" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0004" x="764" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0005" x="764" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0006" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0007" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0008" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0009" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0010" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0011" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0012" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0013" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note LEFT0014" x="1528" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0000" x="2292" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0001" x="2292" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0002" x="3056" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0003" x="3056" y="692" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0004" x="0" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0005" x="0" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0006" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0007" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0008" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0009" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0010" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0011" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0012" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0013" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note RIGHT0014" x="764" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0000" x="1528" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0001" x="1528" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0002" x="2292" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0003" x="2292" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0004" x="3056" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0005" x="3056" y="1384" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0006" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0007" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0008" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0009" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0010" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0011" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0012" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0013" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink Sing Note UP0014" x="0" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0000" x="764" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0001" x="764" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0002" x="764" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0003" x="764" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0004" x="764" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0005" x="764" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0006" x="1528" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0007" x="1528" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0008" x="2292" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0009" x="2292" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0010" x="3056" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0011" x="3056" y="2076" width="764" height="692"/>
+	<SubTexture name="Ink idle dance0012" x="0" y="2768" width="764" height="692"/>
+</TextureAtlas>

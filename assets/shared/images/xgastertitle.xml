@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="xgastertitle.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="IDLE0000" x="0" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0001" x="0" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0002" x="922" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0003" x="1844" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0004" x="2766" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0005" x="2766" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0006" x="3688" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0007" x="4610" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0008" x="5532" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0009" x="6454" y="0" width="922" height="934"/>
+	<SubTexture name="IDLE0010" x="0" y="934" width="922" height="934"/>
+	<SubTexture name="IDLE0011" x="0" y="934" width="922" height="934"/>
+	<SubTexture name="IDLE0012" x="922" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0000" x="1844" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0001" x="1844" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0002" x="2766" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0003" x="2766" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0004" x="3688" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0005" x="4610" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0006" x="5532" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0007" x="5532" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0008" x="6454" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0009" x="0" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0010" x="922" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0011" x="922" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0012" x="1844" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0013" x="2766" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0014" x="2766" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0015" x="3688" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0016" x="4610" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0017" x="5532" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0018" x="6454" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0019" x="0" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0020" x="0" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0021" x="6454" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0022" x="6454" y="934" width="922" height="934"/>
+	<SubTexture name="LEFT0023" x="922" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0024" x="922" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0025" x="1844" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0026" x="2766" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0027" x="2766" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0028" x="3688" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0029" x="3688" y="1868" width="922" height="934"/>
+	<SubTexture name="LEFT0030" x="3688" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0031" x="3688" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0032" x="4610" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0033" x="4610" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0034" x="5532" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0035" x="5532" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0036" x="6454" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0037" x="922" y="2802" width="922" height="934"/>
+	<SubTexture name="LEFT0038" x="0" y="3736" width="922" height="934"/>
+</TextureAtlas>

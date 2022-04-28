@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rpgfire.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fire_iddle0000" x="0" y="0" width="57" height="125"/>
+	<SubTexture name="fire_iddle0001" x="57" y="0" width="57" height="125"/>
+	<SubTexture name="fire_iddle0002" x="114" y="0" width="57" height="125"/>
+	<SubTexture name="fire_start0000" x="171" y="0" width="57" height="125"/>
+	<SubTexture name="fire_start0001" x="0" y="125" width="57" height="125"/>
+	<SubTexture name="fire_start0002" x="57" y="125" width="57" height="125"/>
+</TextureAtlas>

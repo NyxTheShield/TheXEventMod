@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="xgaster1.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Xgaster Sing Note LEFT0000" x="0" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0001" x="0" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0002" x="922" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0003" x="922" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0004" x="1844" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0005" x="2766" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0006" x="3688" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0007" x="3688" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0008" x="4610" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0009" x="5532" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0010" x="6454" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0011" x="6454" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0012" x="0" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0013" x="922" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0014" x="922" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0015" x="1844" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0016" x="2766" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0017" x="3688" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0018" x="4610" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0019" x="5532" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0020" x="5532" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0021" x="4610" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0022" x="4610" y="0" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0023" x="6454" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0024" x="6454" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0025" x="0" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0026" x="922" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0027" x="922" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0028" x="1844" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0029" x="1844" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0030" x="1844" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0031" x="1844" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0032" x="2766" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0033" x="2766" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0034" x="3688" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0035" x="3688" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0036" x="4610" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0037" x="6454" y="934" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note LEFT0038" x="5532" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0000" x="6454" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0001" x="6454" y="1868" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0002" x="0" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0003" x="922" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0004" x="1844" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0005" x="1844" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0006" x="2766" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0007" x="2766" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0008" x="3688" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0009" x="3688" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0010" x="4610" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0011" x="4610" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0012" x="5532" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0013" x="6454" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0014" x="6454" y="2802" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0015" x="0" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0016" x="0" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0017" x="922" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0018" x="922" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0019" x="1844" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0020" x="2766" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0021" x="3688" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0022" x="3688" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0023" x="4610" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0024" x="4610" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0025" x="5532" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0026" x="6454" y="3736" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0027" x="0" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0028" x="922" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0029" x="922" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0030" x="1844" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0031" x="1844" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0032" x="2766" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0033" x="2766" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0034" x="3688" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0035" x="3688" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0036" x="4610" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0037" x="5532" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster Sing Note UP0038" x="6454" y="4670" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0000" x="0" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0001" x="0" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0002" x="922" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0003" x="1844" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0004" x="2766" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0005" x="2766" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0006" x="3688" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0007" x="4610" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0008" x="5532" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0009" x="6454" y="5604" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0010" x="0" y="6538" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0011" x="0" y="6538" width="922" height="934"/>
+	<SubTexture name="Xgaster idle dance0012" x="922" y="6538" width="922" height="934"/>
+</TextureAtlas>

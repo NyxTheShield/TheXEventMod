@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="xgasterdefeat.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="xgaster defeat idle0000" x="0" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0001" x="0" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0002" x="0" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0003" x="922" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0004" x="922" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0005" x="922" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0006" x="1844" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0007" x="1844" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0008" x="1844" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0009" x="2766" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat idle0010" x="2766" y="0" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0000" x="0" y="934" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0001" x="0" y="934" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0002" x="922" y="934" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0003" x="1844" y="934" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0004" x="2766" y="934" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0005" x="2766" y="934" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0006" x="0" y="1868" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0007" x="922" y="1868" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0008" x="1844" y="1868" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0009" x="2766" y="1868" width="922" height="934"/>
+	<SubTexture name="xgaster defeat start0010" x="0" y="2802" width="922" height="934"/>
+</TextureAtlas>
