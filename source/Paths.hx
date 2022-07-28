@@ -11,9 +11,9 @@ import flixel.graphics.FlxGraphic;
 
 class Paths
 {
-	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
+	inline public static final SOUND_EXT = #if web "mp3" #else "ogg" #end;
 
-	public static var dumpExclusions:Array<String> = ['assets/music/freakyMenu.$SOUND_EXT', 'assets/shared/music/breakfast.$SOUND_EXT'];
+	public static final dumpExclusions:Array<String> = ['assets/music/freakyMenu.$SOUND_EXT', 'assets/shared/music/breakfast.$SOUND_EXT'];
 
 	public static function clearUnusedMemory()
 	{
@@ -131,8 +131,7 @@ class Paths
 
 	static public function sound(key:String, ?library:String):Sound
 	{
-		var sound:Sound = returnSound('sounds', key, library);
-		return sound;
+		return returnSound('sounds', key, library);
 	}
 
 	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String):Sound
@@ -157,7 +156,7 @@ class Paths
 
 	inline static public function image(key:String, ?library:String):FlxGraphic
 	{
-		return returnGraphic(key, library, 'png');
+		return returnGraphic(key, library);
 	}
 
 	inline static public function font(key:String):String
@@ -177,9 +176,9 @@ class Paths
 
 	public static var currentTrackedAssets:Map<String, FlxGraphic> = [];
 
-	public static function returnGraphic(key:String, ?library:String, extension:String):FlxGraphic
+	public static function returnGraphic(key:String, ?library:String):FlxGraphic
 	{
-		var path = getPath('images/$key.' + extension, IMAGE, library);
+		var path = getPath('images/$key.png', IMAGE, library);
 		if (OpenFlAssets.exists(path, IMAGE))
 		{
 			if (!currentTrackedAssets.exists(path))

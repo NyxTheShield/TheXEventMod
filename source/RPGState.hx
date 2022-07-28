@@ -281,10 +281,13 @@ class RPGState extends MusicBeatState
 		super.update(elapsed);
 
 		#if android
-		player.left = joystick.acceleration.x < 0;
-		player.right = joystick.acceleration.x > 0;
-		player.up = joystick.acceleration.y < 0;
-		player.down = joystick.acceleration.y > 0;
+		if (player != null && joystick != null)
+		{
+			player.left = joystick.acceleration.x < 0;
+			player.right = joystick.acceleration.x > 0;
+			player.up = joystick.acceleration.y < 0;
+			player.down = joystick.acceleration.y > 0;
+		}
 		#end
 	}
 
