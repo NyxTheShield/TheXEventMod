@@ -316,7 +316,7 @@ class RPGState extends MusicBeatState
 	function CreateJoystick()
 	{
 		// Create the joystick
-		joystick = new FlxJoyStick(150, FlxG.height - 150);
+		joystick = new FlxJoyStick(250, FlxG.height - 250);
 		joystick.alpha = 0.6;
 		add(joystick);
 	}
