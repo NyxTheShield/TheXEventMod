@@ -281,10 +281,25 @@ class RPGState extends MusicBeatState
 		#if android
 		if (player != null && joystick != null)
 		{
-			player.left = (joystick.justPressed() && (joystick.getAngle() > 120 || joystick.getAngle() < -120));
-			player.right = (joystick.justPressed() && joystick.getAngle() > -60 && joystick.getAngle() < -60);
-			player.up = (joystick.justPressed() && joystick.getAngle() > 30 && joystick.getAngle() < 150);
-			player.down = (joystick.justPressed() && joystick.getAngle() > -150 && joystick.getAngle() < -30);
+			if (joystick.justPressed() && (joystick.getAngle() > 120 || joystick.getAngle() < -120))
+				player.left = true;
+			else
+				player.left = false;
+
+			if (joystick.justPressed() && joystick.getAngle() > -60 && joystick.getAngle() < -60)
+				player.right = true;
+			else
+				player.right = false;
+
+			if (joystick.justPressed() && joystick.getAngle() > 30 && joystick.getAngle() < 150)
+				player.up = true;
+			else
+				player.up = false;
+
+			if (joystick.justPressed() && joystick.getAngle() > -150 && joystick.getAngle() < -30)
+				player.down = true;
+			else
+				player.down = false;
 		}
 		#end
 	}
