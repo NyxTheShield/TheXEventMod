@@ -36,6 +36,8 @@ class FlxJoyStick extends FlxSpriteGroup
 
 	static var _joysticks:Array<FlxJoyStick> = [];
 
+	var _currentTouch:FlxTouch;
+	var _tempTouches:Array<FlxTouch> = [];
 	var _zone:FlxRect = FlxRect.get();
 	var _radius:Float = 0;
 	var _direction:Float = 0;
@@ -116,18 +118,43 @@ class FlxJoyStick extends FlxSpriteGroup
 		onPressed = null;
 		thumb = null;
 		base = null;
+
+		_currentTouch = null;
+		_tempTouches = null;
 	}
 
 	override public function update(elapsed:Float):Void
 	{
 		var offAll:Bool = true;
 
-		for (touch in FlxG.touches.list)
+		if (_currentTouch != null)
+			_tempTouches.push(_currentTouch);
+		else
+		{
+			for (touch in FlxG.touches.list)
+			{
+				var touchInserted:Bool = false;
+
+				for (joystick in _joysticks)
+				{
+					if (joystick == this && joystick._currentTouch != touch && !touchInserted)
+					{
+						_tempTouches.push(touch);
+						touchInserted = true;
+					}
+				}
+			}
+		}
+
+		for (touch in _tempTouches)
 		{
 			_point.set(touch.screenX, touch.screenY);
 
 			if (!updateJoystick(_point, touch.pressed, touch.justPressed, touch.justReleased))
+			{
 				offAll = false;
+				break;
+			}
 		}
 
 		if ((status == HIGHLIGHT || status == NORMAL) && _amount != 0)
@@ -147,6 +174,8 @@ class FlxJoyStick extends FlxSpriteGroup
 		if (offAll)
 			status = NORMAL;
 
+		_tempTouches.splice(0, _tempTouches.length);
+
 		super.update(elapsed);
 	}
 
@@ -160,11 +189,16 @@ class FlxJoyStick extends FlxSpriteGroup
 
 			if (Pressed)
 			{
+				if (Touch != null)
+					_currentTouch = Touch;
+
 				status = PRESSED;
 
 				if (JustPressed)
+				{
 					if (onDown != null)
 						onDown();
+				}
 
 				if (status == PRESSED)
 				{
@@ -188,6 +222,8 @@ class FlxJoyStick extends FlxSpriteGroup
 			}
 			else if (JustReleased && status == PRESSED)
 			{
+				_currentTouch = null;
+
 				status = HIGHLIGHT;
 
 				if (onUp != null)
@@ -224,8 +260,8 @@ class FlxJoyStick extends FlxSpriteGroup
 
 	function get_justPressed():Bool
 	{
-		for (touch in FlxG.touches.list)
-			return touch.justPressed && status == PRESSED;
+		if (_currentTouch != null)
+			return _currentTouch.justPressed && status == PRESSED;
 
 		return false;
 	}
@@ -234,8 +270,8 @@ class FlxJoyStick extends FlxSpriteGroup
 
 	function get_justReleased():Bool
 	{
-		for (touch in FlxG.touches.list)
-			return touch.justReleased && status == HIGHLIGHT;
+		if (_currentTouch != null)
+			return _currentTouch.justReleased && status == HIGHLIGHT;
 
 		return false;
 	}
