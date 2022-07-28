@@ -281,10 +281,10 @@ class RPGState extends MusicBeatState
 		#if android
 		if (player != null && joystick != null)
 		{
-			player.left = joystick.acceleration.x < 0;
-			player.right = joystick.acceleration.x > 0;
-			player.up = joystick.acceleration.y < 0;
-			player.down = joystick.acceleration.y > 0;
+			player.left = joystick.justPressed() && (joystick.getAngle() > 120 || joystick.getAngle() < -120);
+			player.right = joystick.justPressed() && joystick.getAngle() > -60 && joystick.getAngle() < -60;
+			player.up = joystick.justPressed() && joystick.getAngle() > 30 && joystick.getAngle() < 150;
+			player.down = joystick.justPressed() && joystick.getAngle() > -150 && joystick.getAngle() < -30;
 		}
 		#end
 	}
@@ -317,7 +317,7 @@ class RPGState extends MusicBeatState
 	function CreateJoystick()
 	{
 		// Create the joystick
-		joystick = new FlxJoyStick();
+		joystick = new FlxJoyStick(150, FlxG.height - 150);
 		joystick.alpha = 0.6;
 		add(joystick);
 	}
