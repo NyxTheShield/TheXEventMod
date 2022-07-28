@@ -87,8 +87,8 @@ class FlxJoyStick extends FlxSpriteGroup
 				Assets.getText('assets/android/joystick.xml'))
 				.getByName('thumb')));
 		thumb.resetSizeFromFrame();
-		thumb.x += -thumb.width * 0.5;
-		thumb.y += -thumb.height * 0.5;
+		//thumb.x += -thumb.width * 0.5;
+		//thumb.y += -thumb.height * 0.5;
 		thumb.scrollFactor.set();
 		thumb.solid = false;
 		#if FLX_DEBUG
@@ -150,7 +150,7 @@ class FlxJoyStick extends FlxSpriteGroup
 		{
 			_point.set(touch.screenX, touch.screenY);
 
-			if (!updateJoystick(_point, touch.pressed, touch.justPressed, touch.justReleased))
+			if (!updateJoystick(_point, touch.pressed, touch.justPressed, touch.justReleased, touch))
 			{
 				offAll = false;
 				break;
@@ -179,7 +179,7 @@ class FlxJoyStick extends FlxSpriteGroup
 		super.update(elapsed);
 	}
 
-	function updateJoystick(TouchPoint:FlxPoint, Pressed:Bool, JustPressed:Bool, JustReleased:Bool):Bool
+	function updateJoystick(TouchPoint:FlxPoint, Pressed:Bool, JustPressed:Bool, JustReleased:Bool, Touch:FlxTouch):Bool
 	{
 		var offAll:Bool = true;
 
