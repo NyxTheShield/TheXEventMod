@@ -56,6 +56,10 @@ class RPGMainMenuState extends RPGState
 			controls.setKeyboardScheme(KeyboardScheme.Solo, true);
 		else
 			controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
+
+		#if android
+		CreateJoystick();
+		#end
 	}
 
 	var playerScroll:Float;

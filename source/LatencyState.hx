@@ -116,7 +116,8 @@ class LatencyState extends MusicBeatState
 		Conductor.changeBPM(120);
 
 		#if android
-		addVirtualPad(LEFT_FULL, A_B);
+		if (init)
+			addVirtualPad(LEFT_FULL, A_B);
 		#end
 
 		super.create();

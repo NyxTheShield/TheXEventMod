@@ -76,9 +76,7 @@ class RPGState extends MusicBeatState
 		}
 
 		#if android
-		joystick = new FlxJoyStick();
-		joystick.alpha = 0.6;
-		add(joystick);
+		CreateJoystick();
 		#end
 	}
 
@@ -314,6 +312,16 @@ class RPGState extends MusicBeatState
 		player.solid = true;
 		playerLayer.add(player);
 	}
+
+	#if android
+	function CreateJoystick()
+	{
+		// Create the joystick
+		joystick = new FlxJoyStick();
+		joystick.alpha = 0.6;
+		add(joystick);
+	}
+	#end
 
 	// Dialog Functions
 	function CreateDialogTrigger(texts:Array<String>, ?colors:Array<FlxColor> = null, ?timers:Array<Float> = null, ?optionalComplete:Void->Void,
