@@ -1080,7 +1080,11 @@ class PlayState extends MusicBeatState
 					],
 						["xchara1", "bf1", "xchara1", "xchara1", "xchara1", "xchara1", "bf1", "xchara1"],
 						[false, true, false, false, false, false, true, false], camFollow);
-					xcharaDialog.onCompleteCallback = startCountdown;
+					xcharaDialog.onCompleteCallback = function()
+					{
+						startCountdown();
+						Paths.clearUnusedMemory();
+					}
 					xcharaDialog.onFocusCallback = FocusCharacter;
 					xcharaDialog.cameras = [camHUD];
 					xcharaDialog.scrollFactor.set();
@@ -1096,7 +1100,11 @@ class PlayState extends MusicBeatState
 						"inkingMistakeDialog/intro_ink005"
 					], ["ink1", "bf1", "ink1", "bf1", "ink1"],
 						[false, true, false, true, false], camFollow);
-					inkDialog.onCompleteCallback = startCountdown;
+					inkDialog.onCompleteCallback = function()
+					{
+						startCountdown();
+						Paths.clearUnusedMemory();
+					}
 					inkDialog.onFocusCallback = FocusCharacter;
 					inkDialog.cameras = [camHUD];
 					inkDialog.scrollFactor.set();
@@ -1115,7 +1123,11 @@ class PlayState extends MusicBeatState
 						"gaster1",
 						"gaster1"
 					], [false, true, false, false, true, false, false, false, false], camFollow);
-					inkDialog.onCompleteCallback = startCountdown;
+					inkDialog.onCompleteCallback = function()
+					{
+						startCountdown();
+						Paths.clearUnusedMemory();
+					}
 					inkDialog.onFocusCallback = FocusCharacter;
 					inkDialog.cameras = [camHUD];
 					inkDialog.scrollFactor.set();
@@ -1143,11 +1155,6 @@ class PlayState extends MusicBeatState
 			ease: newEase,
 			type: FlxTweenType.PINGPONG,
 			loopDelay: delayTime
-			/*
-				onComplete: function(twn:FlxTween)
-				{
-					//TweenOverwriteBGPosition(go,newx,newy);
-			}*/
 		});
 	}
 
@@ -1676,6 +1683,8 @@ class PlayState extends MusicBeatState
 				startTimer.active = true;
 			paused = false;
 		}
+
+		Paths.clearUnusedMemory();
 
 		super.closeSubState();
 	}
