@@ -126,7 +126,7 @@ class FlxJoyStick extends FlxSpriteGroup
 		{
 			_point.set(touch.screenX, touch.screenY);
 
-			if (!updateAnalog(_point, touch.pressed, touch.justPressed, touch.justReleased))
+			if (!updateJoystick(_point, touch.pressed, touch.justPressed, touch.justReleased))
 				offAll = false;
 		}
 
