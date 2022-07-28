@@ -1,7 +1,7 @@
 package;
 
 #if android
-import android.flixel.FlxJoyStick;
+import flixel.ui.FlxAnalog;
 #end
 import flixel.FlxG;
 import flixel.system.FlxSound;
@@ -52,7 +52,7 @@ class RPGState extends MusicBeatState
 	var cachedLevel:FlxTilemapExt;
 	var curtain = new Curtain();
 	#if android
-	var joystick:FlxJoyStick;
+	var joystick:FlxAnalog;
 	#end
 
 	public var levelState:String = "relighted";
@@ -316,7 +316,7 @@ class RPGState extends MusicBeatState
 	function CreateJoystick()
 	{
 		// Create the joystick
-		joystick = new FlxJoyStick(200, FlxG.height - 200, 100, 0.25);
+		joystick = new FlxAnalog(100, FlxG.height - 100, 100, 0.25);
 		joystick.alpha = 0.6;
 		add(joystick);
 	}
