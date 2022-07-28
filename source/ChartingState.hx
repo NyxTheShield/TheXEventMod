@@ -92,6 +92,9 @@ class ChartingState extends MusicBeatState
 
 	override function create()
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		curSection = lastSection;
 
 		gridBG = FlxGridOverlay.create(GRID_SIZE, GRID_SIZE, GRID_SIZE * 8, GRID_SIZE * 16);
@@ -178,11 +181,11 @@ class ChartingState extends MusicBeatState
 		add(curRenderedNotes);
 		add(curRenderedSustains);
 
-		//Nyx Seek Bar
+		// Nyx Seek Bar
 		seekBar = new FlxSprite(seekbarInitialX, seekbarInitialY).loadGraphic(Paths.image('bar', 'shared'));
-		seekBar.scrollFactor.set(0,0);
+		seekBar.scrollFactor.set(0, 0);
 		seekArrow = new FlxSprite(seekbarInitialX, seekbarInitialY).loadGraphic(Paths.image('seekArrow', 'shared'));
-		seekArrow.scrollFactor.set(0,0);
+		seekArrow.scrollFactor.set(0, 0);
 		add(seekBar);
 		add(seekArrow);
 
@@ -326,34 +329,33 @@ class ChartingState extends MusicBeatState
 		check_changeBPM = new FlxUICheckBox(10, 60, null, null, 'Change BPM', 100);
 		check_changeBPM.name = 'check_changeBPM';
 
-		//Nyx: Swap both
+		// Nyx: Swap both
 		var swapFocus:FlxButton = new FlxButton(10, 220, "Swap Focus", function()
 		{
-				check_mustHitSection.checked = !check_mustHitSection.checked;
-				_song.notes[curSection].mustHitSection = check_mustHitSection.checked;
-				updateHeads();
+			check_mustHitSection.checked = !check_mustHitSection.checked;
+			_song.notes[curSection].mustHitSection = check_mustHitSection.checked;
+			updateHeads();
 
-				for (i in 0..._song.notes[curSection].sectionNotes.length)
-				{
-					var note = _song.notes[curSection].sectionNotes[i];
-					note[1] = (note[1] + 4) % 8;
-					_song.notes[curSection].sectionNotes[i] = note;
-					updateGrid();
-				}
-
+			for (i in 0..._song.notes[curSection].sectionNotes.length)
+			{
+				var note = _song.notes[curSection].sectionNotes[i];
+				note[1] = (note[1] + 4) % 8;
+				_song.notes[curSection].sectionNotes[i] = note;
+				updateGrid();
+			}
 		});
 
 		/*
-		//Nyx: Copy P1 to P2
-		var copyToP2:FlxButton = new FlxButton(10, 220, "Swap Focus", function()
-		{
-				for (i in 0..._song.notes[curSection].sectionNotes.length)
-				{
-					var note = _song.notes[curSection].sectionNotes[i];
-					note[1] = (note[1] + 4) % 8;
-					_song.notes[curSection].sectionNotes[i] = note;
-					updateGrid();
-				}
+			//Nyx: Copy P1 to P2
+			var copyToP2:FlxButton = new FlxButton(10, 220, "Swap Focus", function()
+			{
+					for (i in 0..._song.notes[curSection].sectionNotes.length)
+					{
+						var note = _song.notes[curSection].sectionNotes[i];
+						note[1] = (note[1] + 4) % 8;
+						_song.notes[curSection].sectionNotes[i] = note;
+						updateGrid();
+					}
 
 		});*/
 
@@ -480,7 +482,8 @@ class ChartingState extends MusicBeatState
 			}
 			else if (wname == 'note_susLength')
 			{
-				if (curSelectedNote != null){
+				if (curSelectedNote != null)
+				{
 					curSelectedNote[2] = nums.value;
 					updateGrid();
 				}
@@ -559,7 +562,7 @@ class ChartingState extends MusicBeatState
 
 			if (FlxG.mouse.overlaps(curRenderedNotes))
 			{
-				//Select a note when ctrl left clicking
+				// Select a note when ctrl left clicking
 				curRenderedNotes.forEach(function(note:Note)
 				{
 					if (FlxG.mouse.overlaps(note))
@@ -569,15 +572,15 @@ class ChartingState extends MusicBeatState
 							selectNote(note);
 						}
 					}
-
 				});
 			}
 			else
 			{
-				//Does something when you left click and are not overlapping any other note
+				// Does something when you left click and are not overlapping any other note
 			}
 		}
-		if (FlxG.mouse.justPressedRight){
+		if (FlxG.mouse.justPressedRight)
+		{
 			curRenderedNotes.forEach(function(note:Note)
 			{
 				if (FlxG.mouse.overlaps(note))
@@ -728,11 +731,13 @@ class ChartingState extends MusicBeatState
 			+ "\nSection: "
 			+ curSection;
 
-		//Nyx Seek Bar Logic
-		if (FlxG.mouse.justPressed){
-				if (FlxG.mouse.overlaps(seekBar)){
-						SeekBar();
-				}
+		// Nyx Seek Bar Logic
+		if (FlxG.mouse.justPressed)
+		{
+			if (FlxG.mouse.overlaps(seekBar))
+			{
+				SeekBar();
+			}
 		}
 
 		super.update(elapsed);
@@ -740,24 +745,28 @@ class ChartingState extends MusicBeatState
 
 	var minPos = 370;
 	var maxPos = 950;
-	function SeekBar():Void{
-			//Nyx: Hardcoded the positions from 340 to 640
-			var newMouse = FlxG.mouse.x;
 
-			if (newMouse > maxPos){
-				newMouse = maxPos;
-			}
-			var percentage = (newMouse-minPos) / (maxPos - minPos);
-			var songLength = _song.notes.length;
-			var targetSection:Int = Math.round(songLength*percentage);
-			changeSection(targetSection);
+	function SeekBar():Void
+	{
+		// Nyx: Hardcoded the positions from 340 to 640
+		var newMouse = FlxG.mouse.x;
 
-			UpdateSeekBar();
-			//seekArrow.x = seekArrow.globalToLocal(minPos+percentage*(maxPos - minPos));
+		if (newMouse > maxPos)
+		{
+			newMouse = maxPos;
+		}
+		var percentage = (newMouse - minPos) / (maxPos - minPos);
+		var songLength = _song.notes.length;
+		var targetSection:Int = Math.round(songLength * percentage);
+		changeSection(targetSection);
+
+		UpdateSeekBar();
+		// seekArrow.x = seekArrow.globalToLocal(minPos+percentage*(maxPos - minPos));
 	}
 
-	function UpdateSeekBar():Void{
-			seekArrow.x = seekbarInitialX+(curSection/_song.notes.length)*(maxPos - minPos);
+	function UpdateSeekBar():Void
+	{
+		seekArrow.x = seekbarInitialX + (curSection / _song.notes.length) * (maxPos - minPos);
 	}
 
 	function changeNoteSustain(value:Float):Void
@@ -899,8 +908,9 @@ class ChartingState extends MusicBeatState
 			stepperSusLength.value = curSelectedNote[2];
 	}
 
-	function ResetLength():Void {
-			stepperSusLength.value = 0;
+	function ResetLength():Void
+	{
+		stepperSusLength.value = 0;
 	}
 
 	function updateGrid():Void
@@ -1009,18 +1019,18 @@ class ChartingState extends MusicBeatState
 		trace("Strum time:");
 		for (i in _song.notes[curSection].sectionNotes)
 		{
-			//Vomitive hack. But hey it works
+			// Vomitive hack. But hey it works
 			var isLeftSide = i[1] < 4 && FlxG.mouse.x < 160;
-			var isRightSide =  i[1] > 3 && FlxG.mouse.x > 160;
+			var isRightSide = i[1] > 3 && FlxG.mouse.x > 160;
 			var isCorrectSide = (isLeftSide || isRightSide) || FlxG.keys.pressed.CONTROL;
-			//trace("===========================");
-			//trace("Iterated time:" + i[0]);
-			//trace(isCorrectSide);
+			// trace("===========================");
+			// trace("Iterated time:" + i[0]);
+			// trace(isCorrectSide);
 			if (NyxMath.NearlyEquals(i[0], realOffset) && i[1] % 4 == note.noteData && isCorrectSide)
 			{
-					trace(note.noteData);
-					//FlxG.log.add('FOUND EVIL NUMBER');
-					_song.notes[curSection].sectionNotes.remove(i);
+				trace(note.noteData);
+				// FlxG.log.add('FOUND EVIL NUMBER');
+				_song.notes[curSection].sectionNotes.remove(i);
 			}
 		}
 

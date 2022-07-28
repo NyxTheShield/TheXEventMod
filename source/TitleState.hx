@@ -41,17 +41,21 @@ class TitleState extends MusicBeatState
 	var wackyImage:FlxSprite;
 
 	var customTitle:String = "xchara";
+
 	override public function create():Void
 	{
-		FlxG.sound.muteKeys = null;
-
-		#if polymod
-		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
+		#if android
+		FlxG.android.preventDefaultKeys = [BACK];
 		#end
 
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
+		FlxG.sound.muteKeys = null;
+
 		#if sys
-		if (!sys.FileSystem.exists(Sys.getCwd() + "\\assets\\replays"))
-			sys.FileSystem.createDirectory(Sys.getCwd() + "\\assets\\replays");
+		if (!sys.FileSystem.exists(SUtil.getPath() + "assets/replays"))
+			sys.FileSystem.createDirectory(SUtil.getPath() + "assets/replays");
 		#end
 
 		PlayerSettings.init();
@@ -90,7 +94,9 @@ class TitleState extends MusicBeatState
 			FlxG.save.data.offset = 0;
 
 		if (FlxG.save.data.firstRun == null)
-				FlxG.save.data.firstRun = true;
+			FlxG.save.data.firstRun = true;
+
+		FlxG.save.flush();
 
 		Highscore.load();
 
@@ -108,9 +114,9 @@ class TitleState extends MusicBeatState
 				StoryMenuState.weekUnlocked[0] = true;
 		}
 
-		//var aux = new RPGState();
-		//aux.InitRPGState("relighted");
-		//FlxG.switchState(aux);
+		// var aux = new RPGState();
+		// aux.InitRPGState("relighted");
+		// FlxG.switchState(aux);
 
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());
@@ -168,28 +174,28 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-
-		if (customTitle == "xchara"){
-			//Nyx: new Background
-			var bg:FlxSprite = new FlxSprite(-650, -250 ).loadGraphic(Paths.image('overwrite_bg', "shared"));
+		if (customTitle == "xchara")
+		{
+			// Nyx: new Background
+			var bg:FlxSprite = new FlxSprite(-650, -250).loadGraphic(Paths.image('overwrite_bg', "shared"));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
-			bg.scale.set(0.5,0.5);
+			bg.scale.set(0.5, 0.5);
 			add(bg);
 
-			//White floating squares
-			for (i in 0...7){
-				var sqr:FlxSprite = new FlxSprite( (1280/7)*i, 0).loadGraphic(Paths.image('overwrite_square',  "shared"));
+			// White floating squares
+			for (i in 0...7)
+			{
+				var sqr:FlxSprite = new FlxSprite((1280 / 7) * i, 0).loadGraphic(Paths.image('overwrite_square', "shared"));
 				sqr.antialiasing = true;
 				sqr.scrollFactor.set(1.2, 1.2);
 				sqr.active = false;
-				sqr.scale.set(0.5,0.5);
-				PlayState.TweenOverwriteBGPosition(sqr, sqr.x+0, sqr.y+200, (Math.random()*5+2)/3, Math.random()/2,  FlxEase.sineInOut);
+				sqr.scale.set(0.5, 0.5);
+				PlayState.TweenOverwriteBGPosition(sqr, sqr.x + 0, sqr.y + 200, (Math.random() * 5 + 2) / 3, Math.random() / 2, FlxEase.sineInOut);
 				add(sqr);
 			}
 		}
-
 
 		logoBl = new FlxSprite(-150, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -206,13 +212,14 @@ class TitleState extends MusicBeatState
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = true;
-		//add(gfDance);
+		// add(gfDance);
 		add(logoBl);
 
-		//Xchara on title screen
-		if (customTitle == "xchara"){
-				//Demo 1
-				/*
+		// Xchara on title screen
+		if (customTitle == "xchara")
+		{
+			// Demo 1
+			/*
 				xcharaTitle = new FlxSprite(0, 0);
 				xcharaTitle.screenCenter();
 				xcharaTitle.frames = Paths.getSparrowAtlas('xcharaTitle', "shared");
@@ -228,11 +235,10 @@ class TitleState extends MusicBeatState
 				xcharaTitle.scale.set(1.15,1.15);
 				xcharaTitle.animation.play('idle');
 				xcharaTitle.updateHitbox();
-				add(xcharaTitle);*/
+				add(xcharaTitle); */
 
-
-				//Demo 2
-				/*
+			// Demo 2
+			/*
 				xcharaTitle = new FlxSprite(0, 0);
 				xcharaTitle.screenCenter();
 				xcharaTitle.frames = Paths.getSparrowAtlas('inktest', "shared");
@@ -249,62 +255,62 @@ class TitleState extends MusicBeatState
 				xcharaTitle.scale.set(1.1,1.1);
 				xcharaTitle.animation.play('idle');
 				add(xcharaTitle);
-				*/
+			 */
 
-				//Demo 3
-				xcharaTitle = new FlxSprite(0, 0);
-				xcharaTitle.frames = Paths.getSparrowAtlas('xgastertitle', "shared");
-				xcharaTitle.animation.addByPrefix('idle', 'IDLE', 24);
-				xcharaTitle.animation.addByPrefix('singLEFT', 'LEFT', 24);
-				xcharaTitle.antialiasing = true;
-				xcharaTitle.flipX = true;
-				xcharaTitle.x += 500;
-				xcharaTitle.y += -130;
-				xcharaTitle.scale.set(0.7,0.7);
-				xcharaTitle.animation.play('idle');
-				add(xcharaTitle);
-				FlxTween.tween(xcharaTitle, {y: xcharaTitle.y + 25}, 1, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay:1});
+			// Demo 3
+			xcharaTitle = new FlxSprite(0, 0);
+			xcharaTitle.frames = Paths.getSparrowAtlas('xgastertitle', "shared");
+			xcharaTitle.animation.addByPrefix('idle', 'IDLE', 24);
+			xcharaTitle.animation.addByPrefix('singLEFT', 'LEFT', 24);
+			xcharaTitle.antialiasing = true;
+			xcharaTitle.flipX = true;
+			xcharaTitle.x += 500;
+			xcharaTitle.y += -130;
+			xcharaTitle.scale.set(0.7, 0.7);
+			xcharaTitle.animation.play('idle');
+			add(xcharaTitle);
+			FlxTween.tween(xcharaTitle, {y: xcharaTitle.y + 25}, 1, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 1});
 
-				//Nyx Xevent Animation
-				var logoX:FlxSprite = new FlxSprite().loadGraphic(Paths.image('xevent'));
-				logoX.screenCenter();
-				trace("Screen Coordinates:");
-				trace(logoX.x);
-				trace(logoX.y);
-				logoX.x -= 80;
-				logoX.antialiasing = true;
-				add(logoX);
-				FlxTween.tween(logoX, {y: logoX.y + 25}, 1, {ease: FlxEase.quadInOut, type: PINGPONG});
+			// Nyx Xevent Animation
+			var logoX:FlxSprite = new FlxSprite().loadGraphic(Paths.image('xevent'));
+			logoX.screenCenter();
+			trace("Screen Coordinates:");
+			trace(logoX.x);
+			trace(logoX.y);
+			logoX.x -= 80;
+			logoX.antialiasing = true;
+			add(logoX);
+			FlxTween.tween(logoX, {y: logoX.y + 25}, 1, {ease: FlxEase.quadInOut, type: PINGPONG});
 
-				//Nyx: Overwrite lights
+			// Nyx: Overwrite lights
 
-				var lg:FlxSprite = new FlxSprite(-650, -250).loadGraphic(Paths.image('overwrite_light', "shared"));
-				lg.antialiasing = true;
-				lg.scrollFactor.set(0.9, 0.9);
-				lg.active = false;
-				lg.scale.set(0.5,0.5);
-				lg.y-= 100;
+			var lg:FlxSprite = new FlxSprite(-650, -250).loadGraphic(Paths.image('overwrite_light', "shared"));
+			lg.antialiasing = true;
+			lg.scrollFactor.set(0.9, 0.9);
+			lg.active = false;
+			lg.scale.set(0.5, 0.5);
+			lg.y -= 100;
 
-				FlxTween.tween(lg, {alpha:0.4}, 2, {
-					ease: FlxEase.quadInOut,
-					type: FlxTween.PINGPONG,
-					loopDelay:0.5
-				});
+			FlxTween.tween(lg, {alpha: 0.4}, 2, {
+				ease: FlxEase.quadInOut,
+				type: FlxTweenType.PINGPONG,
+				loopDelay: 0.5
+			});
 
-				add(lg);
+			add(lg);
 
-				//Particles
-				for (i in 0...30){
-					var part:FlxSprite = new FlxSprite(-100 + (1500/30) * i, 1000).loadGraphic(Paths.image('particle', "shared"));
-					part.antialiasing = true;
-					part.scrollFactor.set(0.92, 0.92);
-					part.active = false;
-					PlayState.TweenParticles(part, part.x, 120, part.y-1500, 0, (Math.random()*5+3),0, FlxEase.quadInOut, 0.7);
+			// Particles
+			for (i in 0...30)
+			{
+				var part:FlxSprite = new FlxSprite(-100 + (1500 / 30) * i, 1000).loadGraphic(Paths.image('particle', "shared"));
+				part.antialiasing = true;
+				part.scrollFactor.set(0.92, 0.92);
+				part.active = false;
+				PlayState.TweenParticles(part, part.x, 120, part.y - 1500, 0, (Math.random() * 5 + 3), 0, FlxEase.quadInOut, 0.7);
 
-					add(part);
-				}
+				add(part);
+			}
 		}
-
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
@@ -373,8 +379,8 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-
-		if (FlxG.keys.justPressed.L) FlxG.switchState(new LatencyState());
+		if (FlxG.keys.justPressed.L)
+			FlxG.switchState(new LatencyState());
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
@@ -430,12 +436,14 @@ class TitleState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
-					if (FlxG.save.data.firstRun == true){
-							FlxG.switchState(new LatencyState());
-					}
-					else{
-							FlxG.switchState(new RPGMainMenuState());
-					}
+				if (FlxG.save.data.firstRun == true)
+				{
+					FlxG.switchState(new LatencyState());
+				}
+				else
+				{
+					FlxG.switchState(new RPGMainMenuState());
+				}
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
@@ -485,22 +493,26 @@ class TitleState extends MusicBeatState
 		logoBl.animation.play('bump');
 		danceLeft = !danceLeft;
 
-		if (danceLeft){
+		if (danceLeft)
+		{
 			gfDance.animation.play('danceRight');
-			if (customTitle == "xchara") {
+			if (customTitle == "xchara")
+			{
 				xcharaTitle.animation.play('singLEFT');
-				//xcharaTitle.offset.set(60,35);
+				// xcharaTitle.offset.set(60,35);
 			}
 		}
-		else{
+		else
+		{
 			gfDance.animation.play('danceLeft');
-			if (customTitle == "xchara") {
+			if (customTitle == "xchara")
+			{
 				xcharaTitle.animation.play('idle');
-				//xcharaTitle.offset.set(0,0);
+				// xcharaTitle.offset.set(0,0);
 			}
 		}
 
-		//FlxG.log.add(curBeat);
+		// FlxG.log.add(curBeat);
 
 		switch (curBeat)
 		{

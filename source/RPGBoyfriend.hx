@@ -11,91 +11,104 @@ using StringTools;
 
 class RPGBoyfriend extends FlxSprite
 {
+	public function new(x:Float = 0, y:Float = 0)
+	{
+		super(x, y);
+	}
 
+	public var interactSprite:FlxSprite;
+	public var currentState:String = "movement";
 
-    public function new(x:Float = 0, y:Float = 0)
-    {
-         super(x, y);
-    }
+	var currentAnimation:String = "down";
+	var charSpeed:Float = 40000;
 
-    public var interactSprite:FlxSprite;
-    public var currentState:String = "movement";
-    var currentAnimation:String = "down";
-    var charSpeed:Float = 40000;
+	public var up:Bool;
+	public var down:Bool;
+	public var left:Bool;
+	public var right:Bool;
 
-    var up:Bool;
-    var down:Bool;
-    var left:Bool;
-    var right:Bool;
-    var stickX:Float;
-    var stickY:Float;
-    var space:Bool;
+	var stickX:Float;
+	var stickY:Float;
+	var space:Bool;
 
-    var isMoving:Bool = false;
+	var isMoving:Bool = false;
 
-    var lastElapsed:Float = 0;
-    override function update(elapsed:Float)
-  	{
-      lastElapsed = elapsed;
-      FlxG.watch.addQuick("Deltatime",lastElapsed);
-      FlxG.watch.addQuick("X Speed",velocity.x);
-      //Input polling
-      up = FlxG.keys.anyPressed([UP, W]);
-      down = FlxG.keys.anyPressed([DOWN, S]);
-      left = FlxG.keys.anyPressed([LEFT, A]);
-      right = FlxG.keys.anyPressed([RIGHT, D]);
-      space = FlxG.keys.anyJustPressed([SPACE]);
+	var lastElapsed:Float = 0;
 
-      //State machine
-      switch (currentState){
-          case "movement": MovementState();
-          case "dialog": DialogState();
-      }
-      //Update Graphics
-      UpdateAnimation();
-      super.update(elapsed);
-  	}
+	override function update(elapsed:Float)
+	{
+		lastElapsed = elapsed;
+		FlxG.watch.addQuick("Deltatime", lastElapsed);
+		FlxG.watch.addQuick("X Speed", velocity.x);
+		// Input polling
+		up = FlxG.keys.anyPressed([UP, W]);
+		down = FlxG.keys.anyPressed([DOWN, S]);
+		left = FlxG.keys.anyPressed([LEFT, A]);
+		right = FlxG.keys.anyPressed([RIGHT, D]);
+		space = FlxG.keys.anyJustPressed([SPACE]);
 
-    function MovementState(){
-        if (up && down) up = down = false;
-        if (left && right) left = right = false;
+		// State machine
+		switch (currentState)
+		{
+			case "movement":
+				MovementState();
+			case "dialog":
+				DialogState();
+		}
+		// Update Graphics
+		UpdateAnimation();
+		super.update(elapsed);
+	}
 
-        stickY = down? 1 : (up? -1 : 0);
-        stickX = right? 1 : (left? -1 : 0);
+	function MovementState()
+	{
+		if (up && down)
+			up = down = false;
+		if (left && right)
+			left = right = false;
 
-        var stickValues = map(stickX, stickY);
-        velocity.x = stickValues[0]*charSpeed*lastElapsed;
-        velocity.y = stickValues[1]*charSpeed*lastElapsed;
+		stickY = down ? 1 : (up ? -1 : 0);
+		stickX = right ? 1 : (left ? -1 : 0);
 
-        if (left) currentAnimation = "left";
-        else if (right) currentAnimation = "right";
-        else if (up) currentAnimation = "up";
-        else if (down) currentAnimation = "down";
+		var stickValues = map(stickX, stickY);
+		velocity.x = stickValues[0] * charSpeed * lastElapsed;
+		velocity.y = stickValues[1] * charSpeed * lastElapsed;
 
-        isMoving = up || down || left || right;
-        //else currentAnimation = "idle";
-    }
+		if (left)
+			currentAnimation = "left";
+		else if (right)
+			currentAnimation = "right";
+		else if (up)
+			currentAnimation = "up";
+		else if (down)
+			currentAnimation = "down";
 
-    function DialogState(){
+		isMoving = up || down || left || right;
+		// else currentAnimation = "idle";
+	}
 
-    }
+	function DialogState()
+	{
+	}
 
-    function UpdateAnimation(){
-        animation.play(currentAnimation);
-        if (isMoving) animation.resume();
-        else animation.pause();
-    }
+	function UpdateAnimation()
+	{
+		animation.play(currentAnimation);
+		if (isMoving)
+			animation.resume();
+		else
+			animation.pause();
+	}
 
-    public function StopPlayer(){
-        velocity.x= 0;
-        velocity.y = 0;
-        isMoving = false;
-    }
+	public function StopPlayer()
+	{
+		velocity.x = 0;
+		velocity.y = 0;
+		isMoving = false;
+	}
 
-    function map(x:Float, y:Float) {
-    return [
-        x * Math.sqrt(1 - y * y / 2),
-        y * Math.sqrt(1 - x * x / 2)];
-    }
-
+	function map(x:Float, y:Float)
+	{
+		return [x * Math.sqrt(1 - y * y / 2), y * Math.sqrt(1 - x * x / 2)];
+	}
 }

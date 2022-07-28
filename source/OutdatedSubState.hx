@@ -21,12 +21,17 @@ class OutdatedSubState extends MusicBeatState
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
 			"Kade Engine is Outdated!\n"
 			+ MainMenuState.kadeEngineVer
-			+ " is your current version\nwhile the most recent version is " + needVer
+			+ " is your current version\nwhile the most recent version is "
+			+ needVer
 			+ "!\nPress Space to go to the github or ESCAPE to ignore this!!",
 			32);
 		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
 		add(txt);
+
+		#if android
+		addVirtualPad(NONE, A_B);
+		#end
 	}
 
 	override function update(elapsed:Float)

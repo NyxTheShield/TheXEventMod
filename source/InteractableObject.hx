@@ -17,31 +17,35 @@ using StringTools;
 
 class InteractableObject extends FlxSprite
 {
-    public var objectID:String = "default";
-    public var isEnabled:Bool = true;
-    public var isActive:Bool = false;
-    public var isColliding:Bool = false;
-    public var reactivateAfterTriggered:Bool = true;
+	public var objectID:String = "default";
+	public var isEnabled:Bool = true;
+	public var isActive:Bool = false;
+	public var isColliding:Bool = false;
+	public var reactivateAfterTriggered:Bool = true;
 
-    public var callbackParams:Array<String>;
-    public var onActivateCallback:Array<String>->Void;
-    public var onCompleteCallback:Void->Void;
-    
-    public function OnCollideCallback():Bool{
-        if (!isEnabled) return false;
-        if (isActive) return false;
-        isColliding = true;
-        return true;
-    }
+	public var callbackParams:Array<String>;
+	public var onActivateCallback:Array<String>->Void;
+	public var onCompleteCallback:Void->Void;
 
-    public function OnActivate(){
-        isActive = true;
-        onActivateCallback(callbackParams);
-    }
+	public function OnCollideCallback():Bool
+	{
+		if (!isEnabled)
+			return false;
+		if (isActive)
+			return false;
+		isColliding = true;
+		return true;
+	}
 
-    public function EnableInteractable(activeVal:Bool = true, enabledVal:Bool = true){
-        isActive =  activeVal;
-        isEnabled = enabledVal;
-    }
+	public function OnActivate()
+	{
+		isActive = true;
+		onActivateCallback(callbackParams);
+	}
 
+	public function EnableInteractable(activeVal:Bool = true, enabledVal:Bool = true)
+	{
+		isActive = activeVal;
+		isEnabled = enabledVal;
+	}
 }

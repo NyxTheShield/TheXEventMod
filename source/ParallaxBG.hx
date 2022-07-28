@@ -7,6 +7,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.group.FlxGroup;
 import flixel.group.FlxSpriteGroup;
+import flixel.graphics.FlxGraphic;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -17,26 +18,28 @@ using StringTools;
 
 class ParallaxBG extends FlxSpriteGroup
 {
-    public var onUpdateCallback:Void->Void = null;
+	public var onUpdateCallback:Void->Void = null;
 
-    public function InitBG(path:String, targetTime:Float) : FlxSpriteGroup {
-        var targetSprite = new FlxSprite().loadGraphic(path);
-        targetSprite.antialiasing = true;
-        add(targetSprite);
+	public function InitBG(path:FlxGraphic, targetTime:Float):FlxSpriteGroup
+	{
+		var targetSprite = new FlxSprite().loadGraphic(path);
+		targetSprite.antialiasing = true;
+		add(targetSprite);
 
-        //Another targetSprite
-        targetSprite = new FlxSprite().loadGraphic(path);
-        targetSprite.x -= targetSprite.width;
-        targetSprite.antialiasing = true;
-        add(targetSprite);
+		// Another targetSprite
+		targetSprite = new FlxSprite().loadGraphic(path);
+		targetSprite.x -= targetSprite.width;
+		targetSprite.antialiasing = true;
+		add(targetSprite);
 
-        FlxTween.tween(this, {x: targetSprite.width}, targetTime,{
-          type: FlxTween.LOOPING,
-          onUpdate: function(twn:FlxTween){
-              if (onUpdateCallback != null) onUpdateCallback();
-          }
-        });
-        return this;
-    }
-
+		FlxTween.tween(this, {x: targetSprite.width}, targetTime, {
+			type: FlxTweenType.LOOPING,
+			onUpdate: function(twn:FlxTween)
+			{
+				if (onUpdateCallback != null)
+					onUpdateCallback();
+			}
+		});
+		return this;
+	}
 }

@@ -132,7 +132,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
 				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
 
-
 				addOffset('idle');
 				addOffset("singUP", -6, 50);
 				addOffset("singRIGHT", 0, 27);
@@ -141,62 +140,61 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			case 'xchara':
-					// DAD ANIMATION LOADING CODE
+				// DAD ANIMATION LOADING CODE
 
-					tex = Paths.getSparrowAtlas('xcharatest');
-					frames = tex;
-					animation.addByPrefix('idle', 'Dad idle dance', 24);
-					animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
-					animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
-					animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
-					animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
+				tex = Paths.getSparrowAtlas('xcharatest');
+				frames = tex;
+				animation.addByPrefix('idle', 'Dad idle dance', 24);
+				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
 
-					/*
+				/*
 					//-10 in y = ABAJO
 					addOffset('idle', -50, -23);
 					addOffset("singUP", 0, 0);
 					addOffset("singRIGHT", 0, -10);
 					addOffset("singLEFT", -5, -5);
-					addOffset("singDOWN", 0, -20);*/
+					addOffset("singDOWN", 0, -20); */
 
-
-					//Fix?
-					/*
+				// Fix?
+				/*
 					this.loadGraphic(Paths.image('xcharatest', 'shared'),694,618);
 					animation.add('idle', [12,13,14,15,16,17], 24);
 					animation.add('singUP', [9,10,11], 24);
 					animation.add('singRIGHT', [6,7,8], 24);
 					animation.add('singDOWN', [0,1,2], 24);
-					animation.add('singLEFT', [3,4,5], 24);*/
+					animation.add('singLEFT', [3,4,5], 24); */
 
-					playAnim('idle');
+				playAnim('idle');
 
 			case 'ink':
-					// DAD ANIMATION LOADING CODE
-					tex = Paths.getSparrowAtlas('inktest');
-					frames = tex;
-					animation.addByPrefix('idle', 'Ink idle dance', 24);
-					animation.addByPrefix('singUP', 'Ink Sing Note UP', 24);
-					animation.addByPrefix('singRIGHT', 'Ink Sing Note RIGHT', 24);
-					animation.addByPrefix('singDOWN', 'Ink Sing Note DOWN', 24);
-					animation.addByPrefix('singLEFT', 'Ink Sing Note LEFT', 24);
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('inktest');
+				frames = tex;
+				animation.addByPrefix('idle', 'Ink idle dance', 24);
+				animation.addByPrefix('singUP', 'Ink Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Ink Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Ink Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Ink Sing Note LEFT', 24);
 
-					playAnim('idle');
+				playAnim('idle');
 			case 'xgaster':
-					// DAD ANIMATION LOADING CODE
-					tex = Paths.getSparrowAtlas('xgaster1');
-					tex.frames = tex.frames.concat(Paths.getSparrowAtlas('xgaster2').frames);
-					tex.frames = tex.frames.concat(Paths.getSparrowAtlas('xgasterdefeat').frames);
-					frames = tex;
-					animation.addByPrefix('idle', 'Xgaster idle dance', 24);
-					animation.addByPrefix('singUP', 'Xgaster Sing Note UP', 24);
-					animation.addByPrefix('singRIGHT', 'Xgaster Sing Note RIGHT', 24);
-					animation.addByPrefix('singDOWN', 'Xgaster Sing Note DOWN', 24);
-					animation.addByPrefix('singLEFT', 'Xgaster Sing Note LEFT', 24);
-					animation.addByPrefix('defeatStart', 'xgaster defeat start', 24, false);
-					animation.addByPrefix('defeatIdle', 'xgaster defeat idle', 24, true);
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('xgaster1');
+				tex.frames = tex.frames.concat(Paths.getSparrowAtlas('xgaster2').frames);
+				tex.frames = tex.frames.concat(Paths.getSparrowAtlas('xgasterdefeat').frames);
+				frames = tex;
+				animation.addByPrefix('idle', 'Xgaster idle dance', 24);
+				animation.addByPrefix('singUP', 'Xgaster Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Xgaster Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Xgaster Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Xgaster Sing Note LEFT', 24);
+				animation.addByPrefix('defeatStart', 'xgaster defeat start', 24, false);
+				animation.addByPrefix('defeatIdle', 'xgaster defeat idle', 24, true);
 
-					playAnim('idle');
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets');
 				frames = tex;

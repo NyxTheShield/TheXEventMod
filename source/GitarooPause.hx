@@ -18,6 +18,9 @@ class GitarooPause extends MusicBeatState
 
 	override function create()
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
@@ -46,6 +49,10 @@ class GitarooPause extends MusicBeatState
 		add(cancelButton);
 
 		changeThing();
+
+		#if android
+		addVirtualPad(LEFT_RIGHT, A);
+		#end
 
 		super.create();
 	}

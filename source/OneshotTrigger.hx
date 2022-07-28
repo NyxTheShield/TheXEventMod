@@ -15,16 +15,19 @@ import flixel.util.FlxTimer;
 
 using StringTools;
 
-class OneshotTrigger extends InteractableObject{
+class OneshotTrigger extends InteractableObject
+{
+	public var onTriggerEnterCallback:Void->Void;
 
-    public var onTriggerEnterCallback:Void->Void;
-
-    public override function OnCollideCallback():Bool{
-        if (!isEnabled) return false;
-        if (isActive) return false;
-        onTriggerEnterCallback();
-        EnableInteractable(false);
-        this.kill();
-        return true;
-    }
+	public override function OnCollideCallback():Bool
+	{
+		if (!isEnabled)
+			return false;
+		if (isActive)
+			return false;
+		onTriggerEnterCallback();
+		EnableInteractable(false);
+		this.kill();
+		return true;
+	}
 }
