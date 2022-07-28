@@ -59,7 +59,7 @@ class RPGState extends MusicBeatState
 
 	override public function create()
 	{
-		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 
 		super.create();
 		FlxG.debugger.drawDebug = false;
