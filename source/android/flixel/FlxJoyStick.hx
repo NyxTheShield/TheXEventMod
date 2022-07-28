@@ -48,6 +48,8 @@ class FlxJoyStick extends FlxSpriteGroup
 	{
 		super(X, Y);
 
+		scrollFactor.set();
+
 		_radius = Radius;
 		_ease = FlxMath.bound(Ease, 0, 60 / FlxG.updateFramerate);
 
@@ -58,7 +60,6 @@ class FlxJoyStick extends FlxSpriteGroup
 		createBase();
 		createThumb();
 
-		scrollFactor.set();
 		moves = false;
 	}
 
