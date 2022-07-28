@@ -33,10 +33,10 @@ class FlxHitbox extends FlxSpriteGroup
 
 		scrollFactor.set();
 
-		add(buttonLeft = createHint(0, 0, 'left', 0xFF800080));
-		add(buttonDown = createHint(FlxG.width / 4, 0, 'down', 0xFF800080));
-		add(buttonUp = createHint(FlxG.width / 2, 0, 'up', 0xFF800080));
-		add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, 'right', 0xFF800080));
+		add(buttonLeft = createHint(0, 0, 'left', 0xFFA489C4));
+		add(buttonDown = createHint(FlxG.width / 4, 0, 'down', 0xFFA489C4));
+		add(buttonUp = createHint(FlxG.width / 2, 0, 'up', 0xFFA489C4));
+		add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, 'right', 0xFFA489C4));
 	}
 
 	override function destroy()
